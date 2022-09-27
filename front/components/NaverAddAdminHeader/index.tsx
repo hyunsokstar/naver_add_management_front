@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import HedaerBox from '../HedaerBox';
 import HedaerBox2 from '../HedaerBox2';
+import HedaerBox3 from '../HedaerBox3';
 
 
 type Props = {}
@@ -26,6 +27,8 @@ const NaverAddAdminHeader = (props: Props) => {
             <HedaerBox />
 
             <HedaerBox2 />
+
+            <HedaerBox3 />
 
             {/* <Box
                 display="grid"
