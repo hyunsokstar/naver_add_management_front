@@ -23,7 +23,7 @@ const NaverAddAdminHeader = (props: Props) => {
             <Box
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
-                sx={{ width: "200px", border: "1px solid blue" }}
+                sx={{ width: "200px", border: "0px solid blue" }}
             >
                 <Box gridColumn="span 12">
                     <Item>방문자 </Item>
@@ -39,7 +39,7 @@ const NaverAddAdminHeader = (props: Props) => {
             <Box
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
-                sx={{ width: "200px", border: "1px solid blue" }}
+                sx={{ width: "200px", border: "0px solid blue" }}
             >
                 <Box gridColumn="span 12">
                     <Item>페이지뷰 </Item>
@@ -55,7 +55,7 @@ const NaverAddAdminHeader = (props: Props) => {
             <Box
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
-                sx={{ width: "200px", border: "1px solid blue" }}
+                sx={{ width: "200px", border: "0px solid blue" }}
             >
                 <Box gridColumn="span 12">
                     <Item>광고 클릭수 </Item>
@@ -71,7 +71,7 @@ const NaverAddAdminHeader = (props: Props) => {
             <Box
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
-                sx={{ width: "200px", border: "1px solid blue" }}
+                sx={{ width: "200px", border: "0px solid blue" }}
             >
                 <Box gridColumn="span 12">
                     <Item>3회 이상 클릭한 ip </Item>
