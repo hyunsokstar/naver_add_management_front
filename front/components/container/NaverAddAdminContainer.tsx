@@ -1,8 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import api from "../../utils/api"
-// import 'react-data-grid/lib/styles.css';
 import DataGrid from 'react-data-grid';
+import styled from "styled-components";
+import NaverAddAdminHeader from '../NaverAddAdminHeader';
+// NaverAddAdmin
+
+const HeaderContainer = styled.div`
+  display: "flex";
+  justifyContent: "center";
+
+  border: 2px solid red;
+`;
+
+const HeaderDiv = styled.div`
+  font-size: 18px;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  background: papayawhip;
+  border: 2px solid blue;
+`;
+
+const Input = styled.input`
+  font-size: 18px;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  ::placeholder {
+    color: palevioletred;
+  }
+`;
+
 
 // campaign_name campagin_type, click_count,  click_percent
 const columns = [
@@ -28,25 +60,21 @@ function NaverAddAdminContainer({ }: Props) {
   useEffect(() => {
     // get_data_for_naver_add();
   }, [])
-  // const get_data_for_naver_add = () => {
-  //   // try {
-  //   //   const response = await axios.post(`${api.naver_add}/customer-links`, {}, );
-  //   //   console.log("response.data.data : ", response.data.data);
-  //   // } catch (error) {
-  //   //   console.log("error : ", error);
-  //   }
+
 
   return (
     <div>
       <h2>
         네이버 광고 api 호출 해보기 12
       </h2>
-      <div style={{display:"flex", justifyContent:"center", border:"1px solid "}}>
+      {/* <div style={{display:"flex", justifyContent:"center", border:"1px solid "}}>
         <div>방문자: 374</div>
         <div>페이지뷰 : 1823</div>
         <div>광고 클릭수 : 31</div>
         <div>30회 이상 클릭한 IP : 0</div>
-      </div>
+      </div> */}
+
+      <NaverAddAdminHeader />
 
       <br /><br />
       <NaverAddDashBoard />
