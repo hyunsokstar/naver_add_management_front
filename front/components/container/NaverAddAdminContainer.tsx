@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import axios from "axios";
-import api from "../../utils/api"
 import DataGrid from 'react-data-grid';
 import styled from "styled-components";
 import NaverAddAdminHeader from '../NaverAddAdminHeader';
@@ -35,8 +33,6 @@ const Input = styled.input`
   }
 `;
 
-
-// campaign_name campagin_type, click_count,  click_percent
 const columns = [
   { key: 'id', name: 'id' },
   { key: 'campaign_name', name: 'campaign_name' },

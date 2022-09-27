@@ -7,13 +7,14 @@ import { styled } from '@mui/material/styles';
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
-    // padding: theme.spacing(2),
-    height:"40px",
-    textAlign: 'center',
-    // color: theme.palette.text.secondary,
+    height:"60px",
+    display:"flex", 
+    justifyContent:"center",
+    alignItems:"center"
 }));
 
 type Props = {}
+
 
 function HedaerBox2({ }: Props) {
     return (
