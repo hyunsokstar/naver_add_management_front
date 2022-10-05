@@ -38,7 +38,7 @@ const Input = styled.input`
 `;
 
 const sample_columns = [
-  { key: 'clkCnt', name: 'clkCnt' },
+  { key: 'clkCnt', name: '클릭 카운트' },
   { key: 'cpc', name: 'cpc' },
   { key: 'impCnt', name: 'impCnt' },
   { key: 'dateStart', name: 'dateStart' },
@@ -88,21 +88,11 @@ function NaverAddAdminContainer({ }: Props) {
 
 
   return (
-    <div>
+    <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"80%", margin:"auto"}}>
       <h2>
-        네이버 광고 api 호출 해보기 test 
+        네이버 광고 api 호출 
       </h2>
-      {/* <div style={{display:"flex", justifyContent:"center", border:"1px solid "}}>
-        <div>방문자: 374</div>
-        <div>페이지뷰 : 1823</div>
-        <div>광고 클릭수 : 31</div>
-        <div>30회 이상 클릭한 IP : 0</div>
-      </div> */}
-
-      {/* <NaverAddAdminHeader /> */}
-
-      <br /><br />
-      {/* <NaverAddDashBoard /> */}
+      <br />
       <DataGrid columns={columns} rows={basicRows} />
     </div>
   )
