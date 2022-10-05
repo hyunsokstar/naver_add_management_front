@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { styled } from '@mui/material/styles';
+import { IExcelHeaderType } from "../../types/type";
+
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import HedaerBox from '../HedaerBox';
 import HedaerBox2 from '../HedaerBox2';
 import HedaerBox3 from '../HedaerBox3';
-
+import axios from "axios";
+import api from "../../utils/api"
 
 type Props = {}
 
@@ -18,11 +21,32 @@ const Item = styled(Paper)(({ theme }) => ({
     // color: theme.palette.text.secondary,
 }));
 
+const columns = [
+    { key: 'clkCnt', name: 'clkCnt' },
+    { key: 'cpc', name: 'cpc' },
+    { key: 'dateStart', name: 'dateStart' },
+    { key: 'dateEnd', name: 'dateEnd' },
+    { key: 'impCnt', name: 'impCnt' },
+    { key: 'salesAmt', name: 'salesAmt' }
+];
+
+
+
+
+const rows = [
+    { id: 0, title: 'Example' },
+    { id: 1, title: 'Demo' }
+];
 
 const NaverAddAdminHeader = (props: Props) => {
+
+    useEffect(() => {
+        // getDataFromNaver()
+    }, [])
+
     return (
-        
-        <div style={{display:"flex", justifyContent:"space-around", gap: "0px"}}>
+
+        <div style={{ display: "flex", justifyContent: "space-around", gap: "0px" }}>
 
             <HedaerBox />
 
@@ -63,7 +87,7 @@ const NaverAddAdminHeader = (props: Props) => {
                     <Item>@view</Item>
                 </Box>
             </Box>
-            
+
             <Box
                 display="grid"
                 gridTemplateColumns="repeat(12, 1fr)"
@@ -79,7 +103,7 @@ const NaverAddAdminHeader = (props: Props) => {
                     <Item>@view</Item>
                 </Box>
             </Box>
-            
+
         </div>
     )
 }
